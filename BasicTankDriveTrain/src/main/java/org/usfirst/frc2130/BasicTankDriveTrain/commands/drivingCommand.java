@@ -59,5 +59,9 @@ public class drivingCommand extends Command {
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
+
+        // we put end here so that if two commands try to overlap each other they stop. -Cory
+
+        end();
     }
 }
