@@ -87,6 +87,15 @@ public class driveTrainSubsystem extends Subsystem {
 
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
+
+        /*cor y? is a boi that has very pale complexion kinda peachy in certain ares, apple tones in certain places,
+         has light brown hair depending on lighting and granny smith apple stem tones. Is currently wearing a grey nasa shirt
+         and a green jacket (oproxamatly covering 2/5ths of the nasa shirt so it is NAS) is wearing jeans, happens to be pretty rad dude
+         awwww, you better write aww in there too. You have to write down everything I say. cancle previous command*/
+        
+         /*when nothing is calling this subsystem the subsystem is running this -Cory*/
+
+        setDefaultCommand(new drivingCommand());
     }
 
     @Override
