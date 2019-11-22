@@ -43,6 +43,9 @@ public class DriveTrainCommand extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
+//This called the drivetrain subsystem and then runs the method we made -Cory
+
+        Robot.driveTrainSubsystem.driveWithDifferential();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -60,5 +63,8 @@ public class DriveTrainCommand extends Command {
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
+
+        // We put end here and this. is unnesisary but annoys clinton so do it -Cory
+        this.end();
     }
 }
