@@ -131,6 +131,9 @@ public class driveTrainSubsystem extends Subsystem {
 
     public void moveRobot(){
         diffDrive.arcadeDrive(Robot.oi.driverJoystick.getRawAxis(1), Robot.oi.driverJoystick.getRawAxis(4));
+
+        //here we are reminding the motors that the slaves follow the master by calling the method -Cory
+        follow();
     }
 
 }
