@@ -74,10 +74,8 @@ public class DriveTrainSubsystem extends Subsystem {
         diffydrivey.setExpiration(0.1);
         diffydrivey.setMaxOutput(1.0);
 
-
-        //Here we are setting the slaves to make it follow the master so they mirror what the master does -Cory
-        leftMotorSlave.follow(leftMotorMaster);
-        rightMotorSlave.follow(rightMotorMaster);
+        //We are calling the method we made so that the slaves follow the master -Cory
+        obey();
     }
 
     @Override
@@ -106,6 +104,12 @@ public class DriveTrainSubsystem extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
+    //Here we are setting the slaves to make it follow the master so they mirror what the master does in a method -Cory
+    public void obey(){
+    leftMotorSlave.follow(leftMotorMaster);
+    rightMotorSlave.follow(rightMotorMaster);
+    }
+
     /*This is a method, you start with defining what it will be, it first decides if everyone can use it or just this subsystem
     You do this by saying public or private. Then what type of return it will give, the void means it will return nothing
     then we name it that part is the driveWithDifferential. Inside the curly brakets there is what this method will do. 
@@ -113,6 +117,9 @@ public class DriveTrainSubsystem extends Subsystem {
 
     public void driveWithDifferential(){
         diffydrivey.arcadeDrive(Robot.oi.driverJoystick.getRawAxis(1)  , Robot.oi.driverJoystick.getRawAxis(4));
+
+        //We also put this method in here so that the slaves make sure to follow the master -Cory
+        obey();
     }
 
 }
