@@ -43,6 +43,8 @@ public class moveMotorBaseOnProx extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
+        //Here we are calling our method we made in our subsystem by calling our robot then our subsystem and then our method -Cory
+        Robot.driveTrainSubsystem.newMethod();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -60,5 +62,8 @@ public class moveMotorBaseOnProx extends Command {
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
+
+        //This is so if two commands try to run the same things it will stop -Cory
+        this.end();
     }
 }
