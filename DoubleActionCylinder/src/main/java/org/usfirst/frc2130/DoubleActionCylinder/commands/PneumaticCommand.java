@@ -42,6 +42,7 @@ public class PneumaticCommand extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
+        Robot.pneumaticSubsystem.useTheSolenoid();
         
     }
 
@@ -54,6 +55,7 @@ public class PneumaticCommand extends Command {
     // Called once after isFinished returns true
     @Override
     protected void end() {
+        Robot.pneumaticSubsystem.solenoidNeutral();
         
     }
 
